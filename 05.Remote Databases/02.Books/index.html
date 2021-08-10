@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button id="loadBooks">LOAD ALL BOOKS</button>
+<div id="error-notification">
+
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Isbn</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--            <tr>-->
+    <!--                <td>Harry Poter</td>-->
+    <!--                <td>J. K. Rowling</td>-->
+    <!--                <td>0-7475-3269-9</td>-->
+    <!--                <td>-->
+    <!--                    <button>Edit</button>-->
+    <!--                    <button>Delete</button>-->
+    <!--                </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Game of Thrones</td>-->
+    <!--                <td>George R. R. Martin</td>-->
+    <!--                <td>9780553386790</td>-->
+    <!--                <td>-->
+    <!--                    <button>Edit</button>-->
+    <!--                    <button>Delete</button>-->
+    <!--                </td>-->
+    <!--            </tr>-->
+    </tbody>
+</table>
+
+<form id="create-form">
+    <h3>FORM</h3>
+    <label for="create-title">TITLE</label>
+    <input type="text" id="create-title" placeholder="Title...">
+    <label for="create-author">AUTHOR</label>
+    <input type="text" id="create-author" placeholder="Author...">
+    <label for="create-isbn">ISBN</label>
+    <input type="text" id="create-isbn" placeholder="Isbn...">
+    <button>Submit</button>
+</form>
+
+<form id="edit-form">
+    <h3>EDIT FORM</h3>
+    <label for="edit-title">TITLE</label>
+    <input type="text" id="edit-title" placeholder="Title...">
+    <label for="edit-author">AUTHOR</label>
+    <input type="text" id="edit-author" placeholder="Author...">
+    <label for="edit-isbn">ISBN</label>
+    <input type="text" id="edit-isbn" placeholder="Isbn...">
+    <button>Edit</button>
+</form>
+
+<form id="delete-form">
+    <h3>DELETE FORM</h3>
+    <label for="delete-title">TITLE</label>
+    <input type="text" id="delete-title" placeholder="Title...">
+    <label for="delete-author">AUTHOR</label>
+    <input type="text" id="delete-author" placeholder="Author...">
+    <label for="delete-isbn">ISBN</label>
+    <input type="text" id="delete-isbn" placeholder="Isbn...">
+    <button>Delete</button>
+</form>
+<script src="app.js"></script>
+</body>
+</html>
+
+<!--Feel free to change/update/modify the HTML Structure-->

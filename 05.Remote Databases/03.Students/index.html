@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+<table id="results">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Faculty Number</th>
+        <th>Grade</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<form>
+    <h3>FORM</h3>
+    <label for="studentId">ID
+        <input type="number" id="studentId">
+    </label>
+    <label for="firstName">First Name
+        <input type="text" id="firstName">
+    </label>
+    <label for="lastName">Last Name
+        <input type="text" id="lastName">
+    </label>
+    <label for="facultyNumber">Faculty Number
+        <input type="text" id="facultyNumber">
+    </label>
+    <label for="grade">Grade
+        <input type="number" id="grade">
+    </label>
+    <button type="submit">Submit</button>
+    <button type="button" id="loadStudents">Load</button>
+</form>
+<form id="edit-form">
+    <h3>EDIT FORM</h3>
+    <label for="edit-id">ID</label>
+    <input type="number" id="edit-id">
+    <label for="edit-first-name">First Name</label>
+    <input type="text" id="edit-first-name">
+    <label for="edit-last-name">Last Name</label>
+    <input type="text" id="edit-last-name">
+    <label for="edit-faculty-number">Faculty Number</label>
+    <input type="number" id="edit-faculty-number">
+    <label for="edit-grade">Grade</label>
+    <input type="number" id="edit-grade">
+    <button id="edit-btn">Edit</button>
+</form>
+
+<form id="delete-form">
+    <h3>DELETE FORM</h3>
+    <label for="delete-id">ID</label>
+    <input type="number" id="delete-id">
+    <label for="delete-first-name">First Name</label>
+    <input type="text" id="delete-first-name">
+    <label for="delete-last-name">Last Name</label>
+    <input type="text" id="delete-last-name">
+    <label for="delete-faculty-number">Faculty Number</label>
+    <input type="number" id="delete-faculty-number">
+    <label for="delete-grade">Grade</label>
+    <input type="number" id="delete-grade">
+    <button id="delete-btn">Delete</button>
+</form>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBKtuKC-Bv-ItTC-84ImLGwZaVf0RGWkhs",
+        authDomain: "students-aaa7f.firebaseapp.com",
+        projectId: "students-aaa7f",
+        storageBucket: "students-aaa7f.appspot.com",
+        messagingSenderId: "677218016741",
+        appId: "1:677218016741:web:ae5ed3b35e60d9d7d9230c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./app.js"></script>
+</body>
+</html>

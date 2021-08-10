@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Contacts</title>
+</head>
+
+<body>
+<script type="text/x-handlebars-template" id="contact-template">
+    <div class="contact card">
+        <div>
+            <i class="far fa-user-circle gravatar"></i>
+        </div>
+        <div class="info">
+            <h2>Name: {{name}}</h2>
+            <button class="detailsBtn" onclick="showDetails({{id}})">Details</button>
+            <div class="details" id="{{id}}" style="display: none;">
+                <p>Phone number: {{phoneNumber}}</p>
+                <p>Email: {{email}}</p>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<h1>My contacts</h1>
+<div id="contacts"></div>
+
+<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="contacts.js"></script>
+<script type="module">
+    const contactsListElement = document.getElementById("contacts");
+
+    const { compile } = Handlebars;
+    const contactHtmlTemplate = document.getElementById("contact-template").innerHTML;
+    const createContact = compile(contactHtmlTemplate);
+
+    const allContactsHtml = contacts.map(contactObj => createContact(contactObj)).join('');
+
+    contactsListElement.innerHTML = allContactsHtml;
+</script>
+
+
+<script>
+    function showDetails(id) {
+        const detailsDiv = [...document.querySelectorAll('div.details')].filter(el => el.id == id)[0];
+
+        detailsDiv.style.display === "none" ? detailsDiv.style.display = "block" : detailsDiv.style.display = "none";
+    }
+</script>
+</body>
+</html>
